@@ -1,0 +1,58 @@
+body {
+  text-align: center;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background-image:url("https://magazine-cf.techacademy.jp/wp-content/uploads/2021/03/20220916/laptop_small.jpg"); */
+  background-image:url("../images/1576722134-1.png");
+  background-repeat: no-repeat;
+  background-position:50% 50%;
+  background-size:cover;
+  background-attachment: fixed;
+  background-color: #fcfcec;
+  }
+h1 {
+  color: #acd454;
+  font-size: 45pt;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+p#result {
+  color: #6c3c04;
+  font-size: 16pt;
+  font-weight: bold;
+}
+p#value {
+  border-bottom:dashed  3px  ;
+} 
+footer p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 60px;
+  color: black;
+} 
+li {
+  list-style: none;
+}
+form {
+  color: #6c3c04;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table td{
+  padding: 16px 0;
+  border:solid 1px #fcfcec;
+  text-align: center;
+  color: black;
+}
+
+table tr:nth-child(odd){
+  background-color: #b7c794
+}
+table tr:nth-child(even){
+  background-color: #acd454
+}
