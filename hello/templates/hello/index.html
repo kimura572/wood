@@ -8,7 +8,7 @@
 </head>
 <body class="wrapper">
   <div class="message">
-  <h1 href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300 rel="stylesheet">{{title}}</h1>
+  <h1 href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">{{title}}</h1>
   <p>
     <a href="#" id="link_view2" onClick="toggle_view2();return false;" style="display:none;">対応樹種一覧</a>
     <a href="#" id="link_hidden2" onClick="toggle_hidden2();return false;">対応樹種一覧(閉じる)</a>
@@ -95,7 +95,6 @@
   <form action="{% url 'index' %}" method="post" enctype="multipart/form-data">
   {% csrf_token %}
     <p id="result">{{result}}</p>
-    <!-- <p>{{result}}</p> -->
     <p id="value">{{value}}</p>
     <p>{{form}}</p>
     <p>※樹種名が分からない場合は"？"と入力してください。</p>
