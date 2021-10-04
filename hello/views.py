@@ -12,7 +12,7 @@ from PIL import Image
 class HelloView(TemplateView):
   def __init__(self):
     self.params = {
-      'title': '樹種判別',
+      'title': 'wood classifier',
       'message' :'',
       'result':'',
       'value':'',
