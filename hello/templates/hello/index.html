@@ -6,106 +6,105 @@
   <title>{{title}}</title>
   <link rel="stylesheet" type="text/css" href="{% static 'hello/css/style.css' %}" />
 </head>
-<body class="wrapper">
+<body>
   <div class="message">
-  <h1 href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">{{title}}</h1>
-  <p>
-    <a href="#" id="link_view2" onClick="toggle_view2();return false;" style="display:none;">対応樹種一覧</a>
-    <a href="#" id="link_hidden2" onClick="toggle_hidden2();return false;">対応樹種一覧(閉じる)</a>
-  </p>
-  <div id="area_hoge2">
+    <h1 href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">{{title}}</h1>
     <p>
-      <table>
-        <tr>
-          <td>japonica (Sieb. et Zucc.) Hara</td>
-          <td>oxyphyllus Miq</td>
-          <td>arguta (Sieb. et Zucc.) Planch. ex Miq</td> 
-          <td>australis Poir</td>
-          <td>barvinervis Sieb. et Zucc</td>
-        </tr>
-        <tr>
-          <td>commixta Hedl</td>
-          <td>controversa (Hemsl.) Sojak</td>
-          <td>crenata Sieb.et Zucc</td>
-          <td>crispula Blume</td>
-          <td>elata (Miq.) Seemann</td>
-        </tr>
-        <tr>
-          <td>erecta Thunb</td>
-          <td>erythrocarpa Makino</td>
-          <td>furcatum Blume ex Maxim</td>
-          <td>grayana Maxim</td>
-          <td>grossa Sieb. et Zucc</td>
-        </tr>
-        <tr>
-          <td>hydrangeoides Sieb. et Zucc</td>
-          <td>jamasakura Sieb. ex Koidz</td>
-          <td>japonica (Thunb.) Kanitz</td>
-          <td>japonica L</td>
-          <td>japonica Sieb. et Zucc</td>
-        </tr>
-        <tr>
-          <td>japonica Thunb</td>
-          <td>japonicum Sieb. et Zucc</td>
-          <td>japonicum Sieb. ex Nakai</td>
-          <td>aponicum Thunb</td>
-          <td>javanica L</td>
-        </tr>
-        <tr>
-          <td>laxiflora (Sieb. et Zucc.) Bl</td>
-          <td>macrophylla (Wall.) Sojak</td>
-          <td>macropoda Miq</td>
-          <td>mono Maxim</td>
-          <td>multiflora Thunb</td>
-        </tr>
-        <tr>
-          <td>onoei Makino</td>
-          <td>orbiculatus Thunb</td>
-          <td>ovalifolia (Wall.) Drude</td>
-          <td>paniculata Sieb. et Zucc</td>
-          <td>piperitum (L.) DC</td>
-        </tr>
-        <tr>
-          <td>polyandra Sieb. et Zucc</td>
-          <td>polycarpa Maxim</td>
-          <td>praecox Sieb. et Zucc</td>
-          <td>salicina Blume</td>
-          <td>scabra Thunb</td>
-        </tr>
-        <tr>
-          <td>serrata (Thunb. ex Murray) Ser</td>
-          <td>serrata Thunb. ex Murray</td>
-          <td>sieboldiana Blume</td>
-          <td>sieboldianum Miq</td>
-          <td>teijsmannii Zoll. ex Kurz</td>
-        </tr>
-        <tr>
-          <td>trichocarpa Miq</td>
-          <td>trichotomum Thunb</td>
-          <td>tschonoskii Maxim</td>
-          <td>umbellata Thunb</td>
-          <td>villosa (Thunb.) Decne</td>
-        </tr>
-      </table>
+      <a href="#" id="link_view2" onClick="toggle_view2();return false;" style="display:none;">対応樹種一覧</a>
+      <a href="#" id="link_hidden2" onClick="toggle_hidden2();return false;">対応樹種一覧(閉じる)</a>
     </p>
-  </div>
-  
-  <script type="text/javascript" src="{% static 'hello/js/style.js' %}"></script>
-  <p>{{message|safe}}</p>
-  <form action="{% url 'index' %}" method="post" enctype="multipart/form-data">
-  {% csrf_token %}
-    <p id="result">{{result}}</p>
-    <p id="value">{{value}}</p>
-    <p>{{form}}</p>
-    <p>※樹種名が分からない場合は"？"と入力してください。</p>
-    <input id="image" type="file" name="image" accept="image/jpeg, image/png" required>
-    <input type="submit" value="送信">
-  </form>
-
-<footer>
-    <li>
+    <div id="area_hoge2">
+      <p>
+        <table>
+          <tr>
+            <td>ヤマボウシ</td>
+            <td>ツリバナ</td>
+            <td>サルナシ</td> 
+            <td>ヤマグワ</td>
+            <td>リョウブ</td>
+          </tr>
+          <tr>
+            <td>ナナカマド</td>
+            <td>ミズキ</td>
+            <td>クリ</td>
+            <td>ミズナラ</td>
+            <td>タラノキ</td>
+          </tr>
+          <tr>
+            <td>イヌビワ</td>
+            <td>カナクギノキ</td>
+            <td>オオカメノキ</td>
+            <td>ウワミズザクラ</td>
+            <td>ミズメ</td>
+          </tr>
+          <tr>
+            <td>イワガラミ</td>
+            <td>ヤマザクラ</td>
+            <td>ゴンズイ</td>
+            <td>ヤブツバキ</td>
+            <td>マンサク</td>
+          </tr>
+          <tr>
+            <td>ヒサカキ</td>
+            <td>カツラ</td>
+            <td>ヤブニッケイ</td>
+            <td>ネズミモチ</td>
+            <td>ヌルデ</td>
+          </tr>
+          <tr>
+            <td>アカシデ</td>
+            <td>クマノミズキ</td>
+            <td>アオハダ</td>
+            <td>ウラゲエンコウカエデ</td>
+            <td>ノイバラ</td>
+          </tr>
+          <tr>
+            <td>ヤブイバラ</td>
+            <td>ツルウメモドキ</td>
+            <td>ネジキ</td>
+            <td>ノリウツギ</td>
+            <td>サンショウ</td>
+          </tr>
+          <tr>
+            <td>フサザクラ</td>
+            <td>イイギリ</td>
+            <td>ハチジョウキブシ</td>
+            <td>ウラジロガシ</td>
+            <td>マルバウツギ</td>
+          </tr>
+          <tr>
+            <td>ヤマアジサイ</td>
+            <td>コナラ</td>
+            <td>マルバアオダモ</td>
+            <td>コハウチワカエデ</td>
+            <td>ヒメユズリハ</td>
+          </tr>
+          <tr>
+            <td>ヤマウルシ</td>
+            <td>クサギ</td>
+            <td>ミネカエデ</td>
+            <td>クロモジ</td>
+            <td>カマツカ</td>
+          </tr>
+        </table>
+      </p>
+    </div>
+    
+    <script type="text/javascript" src="{% static 'hello/js/style.js' %}"></script>
+    <p>{{message|safe}}</p>
+    <form action="{% url 'index' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+      <p id="result">{{result}}</p>
+      <p id="value">{{value}}</p>
+      <p>{{form}}</p>
+      <p>※樹種名が分からない場合は"？"と入力してください。</p>
+      <input id="image" type="file" name="image" accept="image/jpeg, image/png" required>
+      <input type="submit" value="送信">
+    </form>
+    
+    <footer>
       <p><a href="http://nu-agr-se.flier.jp/" target="_blank">(C) 名古屋大学生物システム工学研究室</a></p>
-    </li>
-</footer>
+    </footer>
+  </div>
 </body>
 </html>
