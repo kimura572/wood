@@ -56,35 +56,25 @@ class Photo:
       return test_data
 
     def predict(test_data):
-      model = load_model("./hello/differ.h5")
+      model = load_model('/Users/fumiyakimura/Desktop/wood/hello/differ.h5')
       predict = model.predict(test_data)
       sum = 0
       for k in range(100):
         sum += predict[k][:]
       s = np.argmax(sum)
-      # cls = {0:'japonica (Sieb. et Zucc.) Hara', 1:'oxyphyllus Miq', 2:'arguta (Sieb. et Zucc.) Planch. ex Miq', 
-      # 3:'australis Poir', 4:'barvinervis Sieb. et Zucc', 5:'commixta Hedl', 6:'controversa (Hemsl.) Sojak',
-      # 7:'crenata Sieb.et Zucc', 8:'crispula Blume', 9:'elata (Miq.) Seemann', 10:'erecta Thunb', 11:'erythrocarpa Makino',
-      # 12:'furcatum Blume ex Maxim', 13:'grayana Maxim',14:'grossa Sieb. et Zucc', 15:'hydrangeoides Sieb. et Zucc',
-      # 16:'jamasakura Sieb. ex Koidz', 17:'japonica (Thunb.) Kanitz', 18:'japonica L', 19:'japonica Sieb. et Zucc',
-      # 20:'japonica Thunb', 21:'japonicum Sieb. et Zucc', 22:'japonicum Sieb. ex Nakai', 23:'japonicum Thunb', 
-      # 24:'javanica L', 25:'laxiflora (Sieb. et Zucc.) Bl', 26:'macrophylla (Wall.) Sojak', 27:'macropoda Miq', 
-      # 28:'mono Maxim', 29:'multiflora Thunb', 30:'onoei Makino', 31:'orbiculatus Thunb', 32:'ovalifolia (Wall.) Drude',
-      # 33:'paniculata Sieb. et Zucc', 34:'piperitum (L.) DC', 35:'polyandra Sieb. et Zucc', 36:'polycarpa Maxim', 
-      # 37:'praecox Sieb. et Zucc', 38:'salicina Blume', 39:'scabra Thunb', 40:'serrata (Thunb. ex Murray) Ser',
-      # 41:'serrata Thunb. ex Murray', 42:'sieboldiana Blume', 43:'sieboldianum Miq', 44:'teijsmannii Zoll. ex Kurz',
-      # 45:'trichocarpa Miq', 46:'trichotomum Thunb', 47:'tschonoskii Maxim', 48:'umbellata Thunb',
-      # 49:'villosa (Thunb.) Decne'}
-      
-      cls = {0:"ヤマボウシ",1:"ツリバナ",2:"サルナシ",3:"ヤマグワ",4:"リョウブ",5:"ナナカマド",
-      6:"ミズキ",7:"クリ",8:"ミズナラ",9:"タラノキ",10:"イヌビワ",11:"カナクギノキ",12:"オオカメノキ",
-      13:"ウワミズザクラ",14:"ミズメ",15:"イワガラミ",16:"ヤマザクラ",17:"ゴンズイ",18:"ヤブツバキ",
-      19:"マンサク",20:"ヒサカキ",21:"カツラ",22:"ヤブニッケイ",23:"ネズミモチ",24:"ヌルデ",
-      25:"アカシデ",26:"クマノミズキ",27:"アオハダ",28:"ウラゲエンコウカエデ",29:"ノイバラ",
-      30:"ヤブイバラ",31:"ツルウメモドキ",32:"ネジキ",33:"ノリウツギ",34:"サンショウ",35:"フサザクラ",
-      36:"イイギリ",37:"ハチジョウキブシ",38:"ウラジロガシ",39:"マルバウツギ",40:"ヤマアジサイ",
-      41:"コナラ",42:"マルバアオダモ",43:"コハウチワカエデ",44:"ヒメユズリハ",45:"ヤマウルシ",
-      46:"クサギ",47:"ミネカエデ",48:"クロモジ",49:"カマツカ"}
+      cls = {0:'japonica (Sieb. et Zucc.) Hara', 1:'oxyphyllus Miq', 2:'arguta (Sieb. et Zucc.) Planch. ex Miq', 
+      3:'australis Poir', 4:'barvinervis Sieb. et Zucc', 5:'commixta Hedl', 6:'controversa (Hemsl.) Sojak',
+      7:'crenata Sieb.et Zucc', 8:'crispula Blume', 9:'elata (Miq.) Seemann', 10:'erecta Thunb', 11:'erythrocarpa Makino',
+      12:'furcatum Blume ex Maxim', 13:'grayana Maxim',14:'grossa Sieb. et Zucc', 15:'hydrangeoides Sieb. et Zucc',
+      16:'jamasakura Sieb. ex Koidz', 17:'japonica (Thunb.) Kanitz', 18:'japonica L', 19:'japonica Sieb. et Zucc',
+      20:'japonica Thunb', 21:'japonicum Sieb. et Zucc', 22:'japonicum Sieb. ex Nakai', 23:'japonicum Thunb', 
+      24:'javanica L', 25:'laxiflora (Sieb. et Zucc.) Bl', 26:'macrophylla (Wall.) Sojak', 27:'macropoda Miq', 
+      28:'mono Maxim', 29:'multiflora Thunb', 30:'onoei Makino', 31:'orbiculatus Thunb', 32:'ovalifolia (Wall.) Drude',
+      33:'paniculata Sieb. et Zucc', 34:'piperitum (L.) DC', 35:'polyandra Sieb. et Zucc', 36:'polycarpa Maxim', 
+      37:'praecox Sieb. et Zucc', 38:'salicina Blume', 39:'scabra Thunb', 40:'serrata (Thunb. ex Murray) Ser',
+      41:'serrata Thunb. ex Murray', 42:'sieboldiana Blume', 43:'sieboldianum Miq', 44:'teijsmannii Zoll. ex Kurz',
+      45:'trichocarpa Miq', 46:'trichotomum Thunb', 47:'tschonoskii Maxim', 48:'umbellata Thunb',
+      49:'villosa (Thunb.) Decne'}
 
       result = cls[s]
       prediction = round(max(sum),1)
