@@ -16,8 +16,8 @@ class HelloView(TemplateView):
       'message' :'',
       'result':'',
       'value':'',
-      'form': HelloForm()
-    }
+      'form': ''
+      }
   def get(self, request):
     return render(request, 'hello/index.html', self.params)
 
@@ -25,7 +25,7 @@ class HelloView(TemplateView):
     if request.method == "POST":
       image = request.FILES.get('image')
       save_image = Image.open(image)
-      name = request.POST['name']
+      name = request.POST['dame']
       Photo.upload(save_image, name)
       Photo.cut_image(save_image)
       test_data = Photo.Test_data()

@@ -96,7 +96,12 @@
     {% csrf_token %}
       <p id="result">{{result}}</p>
       <p id="value">{{value}}</p>
-      <p>{{form}}</p>
+      <!-- ここから -->
+      <body onload="f()">
+      <p>樹種名: <input type="text" name="dame" autocomplete="on" list="dt1"></p>
+      <datalist id="dt1"></datalist>
+      <!-- ここまで -->
+      <!-- <p>{{form}}</p> -->
       <p>※樹種名が分からない場合は"？"と入力してください。</p>
       <input id="image" type="file" name="image" accept="image/jpeg, image/png" required>
       <input type="submit" value="送信">
