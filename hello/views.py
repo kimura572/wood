@@ -1,3 +1,4 @@
+from re import M
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import HelloForm
@@ -28,9 +29,13 @@ class HelloView(TemplateView):
 
   def post(self, request):
     if request.method == "POST":
+      name = request.POST['dame']
+      datab = Member()
+      if not name in list(Member.objects.all().values_list("species_name",flat=True)):
+        datab.species_name = name
+        datab.save()
       image = request.FILES.get('image')
       save_image = Image.open(image)
-      name = request.POST['dame']
       Photo.upload(save_image, name)
       Photo.cut_image(save_image)
       test_data = Photo.Test_data()
