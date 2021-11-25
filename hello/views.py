@@ -1,8 +1,9 @@
+from re import M
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import HelloForm
 from datetime import timezone
-from .models import Photo
+from .models import Photo, Member
 from django.shortcuts import redirect
 from django.views.generic import TemplateView
 from PIL import Image
@@ -16,16 +17,25 @@ class HelloView(TemplateView):
       'message' :'',
       'result':'',
       'value':'',
-      'form': HelloForm()
-    }
+      'form': '',
+      'name':''
+      }
   def get(self, request):
+    if request.method == "GET":
+      customers = list(Member.objects.all().values_list("species_name",flat=True))
+      customers = ','.join(customers)
+      self.params['name']=customers
     return render(request, 'hello/index.html', self.params)
 
   def post(self, request):
     if request.method == "POST":
+      name = request.POST['dame']
+      datab = Member()
+      if not name in list(Member.objects.all().values_list("species_name",flat=True)):
+        datab.species_name = name
+        datab.save()
       image = request.FILES.get('image')
       save_image = Image.open(image)
-      name = request.POST['name']
       Photo.upload(save_image, name)
       Photo.cut_image(save_image)
       test_data = Photo.Test_data()

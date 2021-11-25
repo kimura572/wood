@@ -89,3 +89,6 @@ class Photo:
       result = cls[s]
       prediction = round(max(sum),1)
       return result, prediction
+
+class Member(models.Model):
+  species_name = models.CharField(max_length=100)

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hello',
-]
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -127,15 +127,15 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEPLOY = True
-DEBUG = False
-if DEPLOY:
-    # SECURE_HSTS_SECONDS = 60 # 無知にいじると危険なのでコメントアウト
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-    SECURE_CONTENT_TYPE_NOSNIFF = True
-    SECURE_BROWSER_XSS_FILTER = True
-    SECURE_SSL_REDIRECT = True
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
-    X_FRAME_OPTIONS = "DENY"
-    SECURE_HSTS_PRELOAD = True
+# DEPLOY = True
+# # DEBUG = False
+# if DEPLOY:
+#     # SECURE_HSTS_SECONDS = 60 # 無知にいじると危険なのでコメントアウト
+#     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+#     SECURE_CONTENT_TYPE_NOSNIFF = True
+#     SECURE_BROWSER_XSS_FILTER = True
+#     SECURE_SSL_REDIRECT = True
+#     SESSION_COOKIE_SECURE = True
+#     CSRF_COOKIE_SECURE = True
+#     X_FRAME_OPTIONS = "DENY"
+#     SECURE_HSTS_PRELOAD = True
