@@ -18,17 +18,10 @@ function toggle_hidden2() {
   elem2_3.style.display = "none";
 }
 
-// var nameList = [
-//   'satou', 'suzuki', 'tanaka', 'takahashi', 'itou', 'yamamoto', 'watanabe', 'nakamura', 'kobayashi', 'katou',
-//   'yoshida', 'yamada', 'sasaki', 'yamaguchi', 'matsumoto', 'inoue', 'kimura', 'hayashi', 'saitou', 'shimizu',
-//   'yamazaki', 'abe', 'mori', 'ikeda', 'hashimoto', 'yamashita', 'ishikawa', 'nakajima', 'maeda', 'fujita',
-//   'gotou', 'ogawa', 'okada', 'murakami', 'hasegawa', 'kondou', 'ishii', 'sakamoto', 'endou', 'fujii'
-// ];
-
 var nameList1 = String(document.getElementById('namelist').value);
 var nameList = nameList1.split(',');
+nameList.sort();
 function f(){
-  console.log(nameList)
   for(var i=0;i<nameList.length;i++){
     let op = document.createElement("option");
     op.value = nameList[i];
@@ -36,7 +29,5 @@ function f(){
   }
 }
 
-// require(['../../../../db.sqlite3'], function(num) {
-//   const result = num(10);
-//   console.log(result);
-// });
+
+// http://www.enjoyxstudy.com/javascript/suggest/demo/demo6.html

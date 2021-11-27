@@ -2,5 +2,6 @@
 differ.h5
 venv/
 images/
-__pycache__/
+hello/__pycache__/
+wood/__pycache__/
 .vscode/

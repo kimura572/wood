@@ -14,7 +14,7 @@ class Photo:
       SAVE_DIR = name
       if not os.path.isdir('images/'+SAVE_DIR):
         os.mkdir('images/'+SAVE_DIR)
-      filepath = datetime.now().strftime('%Y%m%d_%H%M%S') + '.jpg'
+      filepath = datetime.now().strftime('%Y_%m_%d_%H_%M_%S') + '.jpg'
       save_path = os.path.join(SAVE_DIR, filepath)
       save_image.save('images/'+save_path)
     

@@ -44,5 +44,5 @@ class HelloView(TemplateView):
       self.params['form'] = HelloForm(request.POST)
       self.params['message'] = chk
       self.params['result'] = '予測結果は'+s+'です。'
-      self.params['value'] = '予測確率は'+str(l)+'%です。'
+      self.params['value'] = '予測精度は'+str(l)+'%です。'
     return render(request, 'hello/index.html', self.params)
