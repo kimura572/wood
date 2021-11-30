@@ -2,6 +2,10 @@
 differ.h5
 venv/
 images/
+<<<<<<< HEAD
 hello/__pycache__/
 wood/__pycache__/
+=======
+__pycache__/
 .vscode/
+>>>>>>> 2b1eb59b2c302c15c1e8f7738e44cce0788c20c9
